@@ -1,47 +1,62 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<directives test="false">
-  <command name="move" path="c:\test" mask="empty.dat" daysOld="0" targetPath="c:\test\archive" inverseMask="true"/>
-  <command name="move" path="c:\test\send" mask=".\.dat" daysOld="0" targetPath="c:\test\send\archive" inverseMask="true"/>
-  <command name="move" path="c:\test\send" mask=".\.dat" daysOld="14" targetPath="c:\test\send\archive" inverseMask="false"/>
-  <command name="move" path="c:\test\send\tmw" mask=".\.dat" daysOld="0" targetPath="c:\test\send\tmw\archive" inverseMask="true"/>
-  <command name="move" path="c:\test\send\tmw" mask=".\.dat" daysOld="14" targetPath="c:\test\send\tmw\archive" inverseMask="false"/>
-  <command name="move" path="c:\test\send\bp" mask=".*_trg\.dat|.*\.trig" daysOld="0" targetPath="c:\test\send\bp\archive" inverseMask="true"/>
-  <command name="move" path="c:\test\send\bp" mask=".*_trg\.dat" daysOld="14" targetPath="c:\test\send\bp\archive" inverseMask="false"/>
-  <command name="move" path="c:\test\send\bp\archivefiles" mask=".\.prc" daysOld="0" targetPath="c:\test\send\bp\archivefiles\archive" inverseMask="true"/>
-  <command name="move" path="c:\test\send\bp\archivefiles" mask=".\.prc" daysOld="14" targetPath="c:\test\send\bp\archivefiles\archive" inverseMask="false"/>
-  <command name="move" path="c:\test\send\tmw\freitrater" mask=".\.log" daysOld="0" targetPath="c:\test\send\tmw\freitrater\archive" inverseMask="true"/>
-  <command name="move" path="c:\test\send\tmw\freitrater" mask=".\.log" daysOld="14" targetPath="c:\test\send\tmw\freitrater\archive" inverseMask="false"/>
-  <command name="move" path="c:\test\send\tmw\archivefiles" mask=".\.prc" daysOld="0" targetPath="c:\test\send\tmw\archivefiles\archive" inverseMask="true"/>
-  <command name="move" path="c:\test\send\tmw\archivefiles" mask=".\.prc" daysOld="14" targetPath="c:\test\send\tmw\archivefiles\archive" inverseMask="false"/>
-  <command name="move" path="c:\test\send\tmw\finals" mask=".\.txt" daysOld="0" targetPath="c:\test\send\tmw\finals\archive" inverseMask="true"/>
-  <command name="move" path="c:\test\send\tmw\finals" mask=".\.txt" daysOld="14" targetPath="c:\test\send\tmw\finals\archive" inverseMask="false"/>
-  <command name="move" path="c:\test\send\marketrates" mask=".*\.dat|.*\.trig" daysOld="0" targetPath="c:\test\send\marketrates\archive" inverseMask="true"/>
-  <command name="move" path="c:\test\send\marketrates" mask=".*\.dat" daysOld="14" targetPath="c:\test\send\marketrates\archive" inverseMask="false"/>
-  <command name="move" path="c:\test\send\marketrates\archivefiles" mask=".\.prc" daysOld="0" targetPath="c:\test\send\marketrates\archivefiles\archive" inverseMask="true"/>
-  <command name="move" path="c:\test\send\marketrates\archivefiles" mask=".\.prc" daysOld="14" targetPath="c:\test\send\marketrates\archivefiles\archive" inverseMask="false"/>
-  <command name="move" path="c:\test\send\chemical" mask=".*\.dat|.*\.trig" daysOld="0" targetPath="c:\test\send\chemical\archive" inverseMask="true"/>
-  <command name="move" path="c:\test\send\chemical" mask=".*\.dat" daysOld="14" targetPath="c:\test\send\chemical\archive" inverseMask="false"/>
-  <command name="move" path="c:\test\receive" mask="empty.dat" daysOld="0" targetPath="c:\test\receive\saatemp" inverseMask="false"/>
-  <command name="move" path="c:\test\receive" mask=".\.dat" daysOld="0" targetPath="c:\test\receive\archive" inverseMask="true"/>
-  <command name="move" path="c:\test\receive" mask=".\.dat" daysOld="14" targetPath="c:\test\receive\archive" inverseMask="false"/>
-  <command name="move" path="c:\test\receive\saatemp" mask="empty.dat" daysOld="0" targetPath="c:\test\receive" inverseMask="false"/>
-  <command name="move" path="c:\test\receive\tmw" mask=".\.dat" daysOld="0" targetPath="c:\test\receive\tmw\archive" inverseMask="true"/>
-  <command name="move" path="c:\test\receive\tmw" mask=".\.dat" daysOld="14" targetPath="c:\test\receive\tmw\archive" inverseMask="false"/>
-  <command name="move" path="c:\test\receive\tmw\archivefiles" mask=".\.prc" daysOld="0" targetPath="c:\test\receive\tmw\archivefiles\archive" inverseMask="true"/>
-  <command name="move" path="c:\test\receive\tmw\archivefiles" mask=".\.prc" daysOld="14" targetPath="c:\test\receive\tmw\archivefiles\archive" inverseMask="false"/>
-  <command name="move" path="c:\test\receive\lisatrkavg" mask=".\.prc" daysOld="0" targetPath="c:\test\receive\lisatrkavg\archive" inverseMask="true"/>
-  <command name="move" path="c:\test\receive\lisatrkavg" mask=".\.prc" daysOld="14" targetPath="c:\test\receive\lisatrkavg\archive" inverseMask="false"/>
-  <command name="move" path="c:\test\receive\bp" mask=".*\.dat|.*\.txt" daysOld="0" targetPath="c:\test\send\bp\archive" inverseMask="true"/>
-  <command name="move" path="c:\test\receive\bp" mask=".*\.dat|.*\.txt" daysOld="14" targetPath="c:\test\send\bp\archive" inverseMask="false"/>
-  <command name="move" path="c:\test\receive\bp\archivefiles" mask=".\.prc" daysOld="0" targetPath="c:\test\receive\bp\archivefiles\archive" inverseMask="true"/>
-  <command name="move" path="c:\test\receive\bp\archivefiles" mask=".\.prc" daysOld="14" targetPath="c:\test\receive\bp\archivefiles\archive" inverseMask="false"/>
-  <command name="move" path="c:\test\receive\marketrates" mask=".*\.dat|.*\.trig" daysOld="0" targetPath="c:\test\receive\marketrates\archive" inverseMask="true"/>
-  <command name="move" path="c:\test\receive\marketrates" mask=".*\.dat" daysOld="14" targetPath="c:\test\receive\marketrates\archive" inverseMask="false"/>
-  <command name="move" path="c:\test\receive\marketrates\archivefiles" mask=".\.prc" daysOld="0" targetPath="c:\test\receive\marketrates\archivefiles\archive" inverseMask="true"/>
-  <command name="move" path="c:\test\receive\marketrates\archivefiles" mask=".\.prc" daysOld="14" targetPath="c:\test\receive\marketrates\archivefiles\archive" inverseMask="false"/>
-  <command name="move" path="c:\test\receive\chemical" mask=".*\.dat" daysOld="0" targetPath="c:\test\receive\chemical\archive" inverseMask="true"/>
-  <command name="move" path="c:\test\receive\chemical" mask=".*\.dat" daysOld="14" targetPath="c:\test\receive\chemical\archive" inverseMask="false"/>
-  
-  
-  
-</directives>
+<!DOCTYPE directives
+[
+<!ELEMENT directives (command)>
+<!ATTLIST directives verbosity (0|1|2|3|4|5|6|7|8|9|10) "2">
+<!ATTLIST directives test (true|false) "false">
+<!ELEMENT command EMPTY>
+<!ATTLIST command name (move | copy | delete) #REQUIRED>
+<!ATTLIST command id CDATA #REQUIRED>
+<!ATTLIST command path CDATA #REQUIRED>
+<!ATTLIST command mask CDATA #REQUIRED>
+<!ATTLIST command daysOld CDATA #REQUIRED>
+<!ATTLIST command targetPath CDATA #REQUIRED>
+<!ATTLIST command inverseMask (true|false) #REQUIRED>
+]>
+
+<directives test="false" verbosity="10">
+  <command id="1" name="move" path="c:\test" mask="empty.dat" daysOld="0" targetPath="c:\test\archive" inverseMask="true"/>
+    <command id="2" name="move" path="c:\test\send" mask=".\.dat" daysOld="0" targetPath="c:\test\send\archive" inverseMask="true"/>
+      <command id="3" name="move" path="c:\test\send" mask=".\.dat" daysOld="14" targetPath="c:\test\send\archive" inverseMask="false"/>
+        <command id="4" name="move" path="c:\test\send\tmw" mask=".\.dat" daysOld="0" targetPath="c:\test\send\tmw\archive" inverseMask="true"/>
+          <command id="5" name="move" path="c:\test\send\tmw" mask=".\.dat" daysOld="14" targetPath="c:\test\send\tmw\archive" inverseMask="false"/>
+            <command id="6" name="move" path="c:\test\send\bp" mask=".*_trg\.dat|.*\.trig" daysOld="0" targetPath="c:\test\send\bp\archive" inverseMask="true"/>
+              <command id="7" name="move" path="c:\test\send\bp" mask=".*_trg\.dat" daysOld="14" targetPath="c:\test\send\bp\archive" inverseMask="false"/>
+                <command id="8" name="move" path="c:\test\send\bp\archivefiles" mask=".\.prc" daysOld="0" targetPath="c:\test\send\bp\archivefiles\archive" inverseMask="true"/>
+                  <command id="9" name="move" path="c:\test\send\bp\archivefiles" mask=".\.prc" daysOld="14" targetPath="c:\test\send\bp\archivefiles\archive" inverseMask="false"/>
+                    <command id="10" name="move" path="c:\test\send\tmw\freitrater" mask=".\.log" daysOld="0" targetPath="c:\test\send\tmw\freitrater\archive" inverseMask="true"/>
+                      <command id="11" name="move" path="c:\test\send\tmw\freitrater" mask=".\.log" daysOld="14" targetPath="c:\test\send\tmw\freitrater\archive" inverseMask="false"/>
+                        <command id="12" name="move" path="c:\test\send\tmw\archivefiles" mask=".\.prc" daysOld="0" targetPath="c:\test\send\tmw\archivefiles\archive" inverseMask="true"/>
+                          <command id="13" name="move" path="c:\test\send\tmw\archivefiles" mask=".\.prc" daysOld="14" targetPath="c:\test\send\tmw\archivefiles\archive" inverseMask="false"/>
+                            <command id="14" name="move" path="c:\test\send\tmw\finals" mask=".\.txt" daysOld="0" targetPath="c:\test\send\tmw\finals\archive" inverseMask="true"/>
+                              <command id="15" name="move" path="c:\test\send\tmw\finals" mask=".\.txt" daysOld="14" targetPath="c:\test\send\tmw\finals\archive" inverseMask="false"/>
+                                <command id="16" name="move" path="c:\test\send\marketrates" mask=".*\.dat|.*\.trig" daysOld="0" targetPath="c:\test\send\marketrates\archive" inverseMask="true"/>
+                                  <command id="17" name="move" path="c:\test\send\marketrates" mask=".*\.dat" daysOld="14" targetPath="c:\test\send\marketrates\archive" inverseMask="false"/>
+                                    <command id="18" name="move" path="c:\test\send\marketrates\archivefiles" mask=".\.prc" daysOld="0" targetPath="c:\test\send\marketrates\archivefiles\archive" inverseMask="true"/>
+                                      <command id="19" name="move" path="c:\test\send\marketrates\archivefiles" mask=".\.prc" daysOld="14" targetPath="c:\test\send\marketrates\archivefiles\archive" inverseMask="false"/>
+                                        <command id="20" name="move" path="c:\test\send\chemical" mask=".*\.dat|.*\.trig" daysOld="0" targetPath="c:\test\send\chemical\archive" inverseMask="true"/>
+                                          <command id="21" name="move" path="c:\test\send\chemical" mask=".*\.dat" daysOld="14" targetPath="c:\test\send\chemical\archive" inverseMask="false"/>
+                                            <command id="22" name="move" path="c:\test\receive" mask="empty.dat" daysOld="0" targetPath="c:\test\receive\saatemp" inverseMask="false"/>
+                                              <command id="23" name="move" path="c:\test\receive" mask=".\.dat" daysOld="0" targetPath="c:\test\receive\archive" inverseMask="true"/>
+                                                <command id="24" name="move" path="c:\test\receive" mask=".\.dat" daysOld="14" targetPath="c:\test\receive\archive" inverseMask="false"/>
+                                                  <command id="25" name="move" path="c:\test\receive\saatemp" mask="empty.dat" daysOld="0" targetPath="c:\test\receive" inverseMask="false"/>
+                                                    <command id="26" name="move" path="c:\test\receive\tmw" mask=".\.dat" daysOld="0" targetPath="c:\test\receive\tmw\archive" inverseMask="true"/>
+                                                      <command id="27" name="move" path="c:\test\receive\tmw" mask=".\.dat" daysOld="14" targetPath="c:\test\receive\tmw\archive" inverseMask="false"/>
+                                                        <command id="28" name="move" path="c:\test\receive\tmw\archivefiles" mask=".\.prc" daysOld="0" targetPath="c:\test\receive\tmw\archivefiles\archive" inverseMask="true"/>
+                                                          <command id="29" name="move" path="c:\test\receive\tmw\archivefiles" mask=".\.prc" daysOld="14" targetPath="c:\test\receive\tmw\archivefiles\archive" inverseMask="false"/>
+                                                            <command id="30" name="move" path="c:\test\receive\lisatrkavg" mask=".\.prc" daysOld="0" targetPath="c:\test\receive\lisatrkavg\archive" inverseMask="true"/>
+                                                              <command id="31" name="move" path="c:\test\receive\lisatrkavg" mask=".\.prc" daysOld="14" targetPath="c:\test\receive\lisatrkavg\archive" inverseMask="false"/>
+                                                                <command id="32" name="move" path="c:\test\receive\bp" mask=".*\.dat|.*\.txt" daysOld="0" targetPath="c:\test\send\bp\archive" inverseMask="true"/>
+                                                                  <command id="33" name="move" path="c:\test\receive\bp" mask=".*\.dat|.*\.txt" daysOld="14" targetPath="c:\test\send\bp\archive" inverseMask="false"/>
+                                                                    <command id="34" name="move" path="c:\test\receive\bp\archivefiles" mask=".\.prc" daysOld="0" targetPath="c:\test\receive\bp\archivefiles\archive" inverseMask="true"/>
+                                                                      <command id="35" name="move" path="c:\test\receive\bp\archivefiles" mask=".\.prc" daysOld="14" targetPath="c:\test\receive\bp\archivefiles\archive" inverseMask="false"/>
+                                                                        <command id="36" name="move" path="c:\test\receive\marketrates" mask=".*\.dat|.*\.trig" daysOld="0" targetPath="c:\test\receive\marketrates\archive" inverseMask="true"/>
+                                                                          <command id="37" name="move" path="c:\test\receive\marketrates" mask=".*\.dat" daysOld="14" targetPath="c:\test\receive\marketrates\archive" inverseMask="false"/>
+                                                                            <command id="38" name="move" path="c:\test\receive\marketrates\archivefiles" mask=".\.prc" daysOld="0" targetPath="c:\test\receive\marketrates\archivefiles\archive" inverseMask="true"/>
+                                                                              <command id="39" name="move" path="c:\test\receive\marketrates\archivefiles" mask=".\.prc" daysOld="14" targetPath="c:\test\receive\marketrates\archivefiles\archive" inverseMask="false"/>
+                                                                                <command id="40" name="move" path="c:\test\receive\chemical" mask=".*\.dat" daysOld="0" targetPath="c:\test\receive\chemical\archive" inverseMask="true"/>
+                                                                                  <command id="41" name="move" path="c:\test\receive\chemical" mask=".*\.dat" daysOld="14" targetPath="c:\test\receive\chemical\archive" inverseMask="false"/>
+                                                                                    
+                                                                                      
+                                                                                        
+                                                                                        </directives>
