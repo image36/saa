@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<directives test="false">
+  <command name="delete" path="c:\test\receive\archive" mask=".*" daysOld="1" targetPath="c:\test\receive\archive\temp" inverseMask="false"/>
+</directives>
