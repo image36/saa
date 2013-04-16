@@ -61,6 +61,7 @@ namespace saa {
             if (l != null) {
                 int.TryParse(l.Value, out logVerbosity);
             }
+            log.Verbosity = logVerbosity;
             // loop thru each node and do what it says
             log.WriteLine(string.Format("Executing {0}", args[0]),5);
             try{
