@@ -16,11 +16,11 @@
 
 <directives test="false" verbosity="10">
   <command id="1" name="move" path="c:\test" mask="empty.dat" daysOld="0" targetPath="c:\test\archive" inverseMask="true"/>
-    <command id="2" name="move" path="c:\test\send" mask=".\.dat" daysOld="0" targetPath="c:\test\send\archive" inverseMask="true"/>
-      <command id="3" name="move" path="c:\test\send" mask=".\.dat" daysOld="14" targetPath="c:\test\send\archive" inverseMask="false"/>
-        <command id="4" name="move" path="c:\test\send\tmw" mask=".\.dat" daysOld="0" targetPath="c:\test\send\tmw\archive" inverseMask="true"/>
-          <command id="5" name="move" path="c:\test\send\tmw" mask=".\.dat" daysOld="14" targetPath="c:\test\send\tmw\archive" inverseMask="false"/>
-            <command id="6" name="move" path="c:\test\send\bp" mask=".*_trg\.dat|.*\.trig" daysOld="0" targetPath="c:\test\send\bp\archive" inverseMask="true"/>
+ <command id="2" name="move" path="c:\test\send" mask=".\.dat" daysOld="0" targetPath="c:\test\send\archive" inverseMask="true"/>
+<command id="3" name="move" path="c:\test\send" mask=".\.dat" daysOld="14" targetPath="c:\test\send\archive" inverseMask="false"/>
+<command id="4" name="move" path="c:\test\send\tmw" mask=".\.dat" daysOld="0" targetPath="c:\test\send\tmw\archive" inverseMask="true"/>
+<command id="5" name="move" path="c:\test\send\tmw" mask=".\.dat" daysOld="14" targetPath="c:\test\send\tmw\archive" inverseMask="false"/>
+ <command id="6" name="move" path="c:\test\send\bp" mask=".*_trg\.dat|.*\.trig" daysOld="0" targetPath="c:\test\send\bp\archive" inverseMask="true"/>
               <command id="7" name="move" path="c:\test\send\bp" mask=".*_trg\.dat" daysOld="14" targetPath="c:\test\send\bp\archive" inverseMask="false"/>
                 <command id="8" name="move" path="c:\test\send\bp\archivefiles" mask=".\.prc" daysOld="0" targetPath="c:\test\send\bp\archivefiles\archive" inverseMask="true"/>
                   <command id="9" name="move" path="c:\test\send\bp\archivefiles" mask=".\.prc" daysOld="14" targetPath="c:\test\send\bp\archivefiles\archive" inverseMask="false"/>
