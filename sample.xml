@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE directives
+[
+<!ELEMENT directives (command)>
+<!ATTLIST directives id CDATA #REQUIRED>
+<!ATTLIST directives test (true|false) "false">
+<!ELEMENT command EMPTY>
+<!ATTLIST command name (move | copy | delete) #REQUIRED>
+<!ATTLIST command path CDATA #REQUIRED>
+<!ATTLIST command mask CDATA #REQUIRED>
+<!ATTLIST command daysOld CDATA #REQUIRED>
+<!ATTLIST command targetPath CDATA #REQUIRED>
+<!ATTLIST command inverseMask (true|false) #REQUIRED>
+]>
+<directives test="true" id="foo">
+  <command name="move" path="c:\foo\" mask=".*" daysOld="0" targetPath="c:\bar" inverseMask="false"/>
+</directives>
