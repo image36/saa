@@ -87,6 +87,7 @@ namespace saa {
                 Err(string.Format("Exception occurred:{0}", ex.Message));
             }
             log.WriteLine("===================================== Finished =====================================");
+            log.Dispose();
         }
         static bool exec(string p) {
             // get the files in the path
