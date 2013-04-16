@@ -46,7 +46,7 @@ namespace saa {
         public Log(string logPath, int verbosity, bool includeTimestamp) {
             Verbosity = verbosity;
             IncludeTimestamp = includeTimestamp;
-            _logThread = new Thread(StartLogWriter) {Name = "Log."};
+            _logThread = new Thread(StartLogWriter) { Name = "Log." };
             _logThread.SetApartmentState(ApartmentState.MTA);
             _threadIsRunning = true;
             _logThread.Start();
@@ -74,28 +74,34 @@ namespace saa {
         /// Starts the log writer thread.
         /// </summary>
         private void StartLogWriter() {
-            while (_threadIsRunning) {
-                if (_logStreamIn.Count > 0) {
-                    string logStreamOut;
-                    lock (_padlock) {
-                        logStreamOut = String.Join(Environment.NewLine, _logStreamIn.ToArray());
-                        _logStreamIn.RemoveRange(0, _logStreamIn.Count);
-                    }
-                    // make sure directory exists.
-                    var dir = Path.GetDirectoryName(_logFilePath);
-                    if(dir == null) {
-                        var e = new NullReferenceException("Log directory path is null");
-                        throw e;
-                    }
-                    if (!Directory.Exists(dir)){
-                        Directory.CreateDirectory(dir);
-                    }
-                    using (var w = File.AppendText(_logFilePath)) {
-                        w.WriteLine(logStreamOut);
-                        w.Flush();
-                    }
-                }
+            while (_threadIsRunning){
+                Flush();
                 Thread.Sleep(LogThreadSleepTime);
+            }
+        }
+        /// <summary>
+        /// Flushes any pending writes to the log.
+        /// </summary>
+        public void Flush(){
+            if (_logStreamIn.Count > 0) {
+                string logStreamOut;
+                lock (_padlock) {
+                    logStreamOut = String.Join(Environment.NewLine, _logStreamIn.ToArray());
+                    _logStreamIn.RemoveRange(0, _logStreamIn.Count);
+                }
+                // make sure directory exists.
+                var dir = Path.GetDirectoryName(_logFilePath);
+                if (dir == null) {
+                    var e = new NullReferenceException("Log directory path is null");
+                    throw e;
+                }
+                if (!Directory.Exists(dir)) {
+                    Directory.CreateDirectory(dir);
+                }
+                using (var w = File.AppendText(_logFilePath)) {
+                    w.WriteLine(logStreamOut);
+                    w.Flush();
+                }
             }
         }
         /// <summary>
@@ -103,7 +109,7 @@ namespace saa {
         /// </summary>
         /// <param name="dataToLog">The data to log.</param>
         public void WriteLine(string dataToLog) {
-            WriteLine(dataToLog,0);
+            WriteLine(dataToLog, 0);
         }
         /// <summary>
         /// Write a line to the log.
@@ -115,7 +121,7 @@ namespace saa {
             if (Verbosity < verbosity) { return; }
             lock (_padlock) {
                 var timestamp = string.Empty;
-                if(IncludeTimestamp) {
+                if (IncludeTimestamp) {
                     timestamp = string.Format("{0} : ", DateTime.Now.ToString("G"));
                 }
                 _logStreamIn.Add(string.Format("{0}{1}", timestamp, dataToLog));
