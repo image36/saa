@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 namespace saa {
     class Program {
         private static string formatMessage = @"See Saa DTD";
-        private static string logName = "log_{0}.txt";
+        private static string logName = "SAA_log_{0}.txt";
         private static Log log;
         private static int logVerbosity = 0;
         private static string command = "";
