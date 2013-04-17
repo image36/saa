@@ -18,7 +18,7 @@ Here is a [sample XML File](https://github.com/image36/saa/blob/master/sample.xm
 
 All directives are contained in the root node "directives".
 
-`&lt;directives test="true" verbosity="2" log="c:\log\"&gt;`
+`<directives test="true" verbosity="2" log="c:\log\">`
 
 * test:  This is a Boolean value (true or false).  When set to true no actions are taken, but messages are logged and displayed on what action would have happened.
 * verbosity: 0-10.  How verbose should the log and console output be?  0 = quiet through 10 = talkative.
@@ -28,7 +28,7 @@ All directives are contained in the root node "directives".
 
 All commands are separated into separate command nodes.
 
-`&lt;command id="command_1" name="move" path="c:\foo\" mask=".*" daysOld="0" targetPath="c:\bar" inverseMask="false"/&gt;`
+`<command id="command_1" name="move" path="c:\foo\" mask=".*" daysOld="0" targetPath="c:\bar" inverseMask="false"/>`
 
 * id:  The ID of the command.  This is used in the log file and can help with debugging your directives.
 * name: The name of the command to use.  Valid names are move, copy and delete.
