@@ -18,14 +18,13 @@ namespace saa {
         private static string cmdId = "";
         static void Err(string msg){
             Console.WriteLine(msg);
-            log.WriteLine(msg);
+            if(log!=null){
+                log.WriteLine(msg);
+            }
         }
         static void Main(string[] args){
             var execDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
             var logDateFormat = DateTime.Now.ToString("G").Replace("/", ".").Replace(":", ".").Replace(" ", "_");
-            var logPath = Path.Combine(execDir, string.Format(logName, DateTime.Now.ToString(logDateFormat)));
-            log = new Log(logPath, logVerbosity, true);
-            log.WriteLine("===================================== Started ======================================");
             if (args.Length == 0){
                 Err("Please provide a path to an saa directive XML file.");
                 return;
@@ -51,6 +50,23 @@ namespace saa {
                 formatError();
                 return;
             }
+            var p = doc.DocumentElement.Attributes["log"];
+            var logPathFromXml = "~";
+            if (p != null){
+                logPathFromXml = p.Value;
+            }
+            var logPath = Path.Combine(logPathFromXml.Replace("~", execDir), string.Format(logName, DateTime.Now.ToString(logDateFormat)));
+            try{
+                // if the directory the log file belongs in does not exist, create it
+                if(!Directory.Exists(Path.GetDirectoryName(logPath))){
+                    Directory.CreateDirectory(Path.GetDirectoryName(logPath));
+                }
+            } catch(Exception ex){
+                Err(string.Format("Can't create log file at {0}.  {1}", logPath, ex.Message));
+            }
+            // start writing to the log now that we have a path
+            log = new Log(logPath, logVerbosity, true);
+            log.WriteLine("===================================== Started ======================================");
             // check for test attribute on root node
             var t = doc.DocumentElement.Attributes["test"];
             if (t != null) {
