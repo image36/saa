@@ -4,6 +4,7 @@
 <!ELEMENT directives (command)>
 <!ATTLIST directives verbosity (0|1|2|3|4|5|6|7|8|9|10) "2">
 <!ATTLIST directives test (true|false) "false">
+<!ATTLIST directives log CDATA #REQUIRED>
 <!ELEMENT command EMPTY>
 <!ATTLIST command name (move | copy | delete) #REQUIRED>
 <!ATTLIST command id CDATA #REQUIRED>
@@ -13,6 +14,6 @@
 <!ATTLIST command targetPath CDATA #REQUIRED>
 <!ATTLIST command inverseMask (true|false) #REQUIRED>
 ]>
-<directives test="true" verbosity="2">
+<directives test="true" verbosity="2" log="c:\log\">
   <command id="command_1" name="move" path="c:\foo\" mask=".*" daysOld="0" targetPath="c:\bar" inverseMask="false"/>
 </directives>
