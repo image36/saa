@@ -1,7 +1,5 @@
 #Sir Archives-a-lot
 
-<img src="http://tony.nerdadelic.com/gif/GYUyCdD.gif" alt="Rare image of Sir Archives-a-lot">
-
 ## What does it do?
 
 SAA can move, copy or delete files.  The affected files match a regular expression and optionally a last write date.
